@@ -1,0 +1,29 @@
+{
+    "name": "okami-chen/configure-client",
+    "type": "library",
+    "keywords": ["laravel","php","configure"],
+    "description": "configure-client module",
+    "homepage": "https://github.com/okami-chen/configure-client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OkamiChen",
+            "email": "x25125x@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OkamiChen\\ConfigureClient\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OkamiChen\\ConfigureClient\\ClientServiceProvider"
+            ]
+        }
+    }
+}
