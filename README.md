@@ -26,3 +26,7 @@ php aratisan configure:client:daemon
 2、获取配置成功
 
 `OkamiChen\ConfigureClient\Event\ConfigSuccess`
+
+## 补充说明
+`configure:client:daemon`仅获取配置,配置的使用请自行安排
+
