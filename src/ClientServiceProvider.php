@@ -12,7 +12,7 @@ class ClientServiceProvider extends ServiceProvider {
      * @var array
      */
     protected $commands = [
-
+        __NAMESPACE__.'\\Console\\Command\DaemonCommand'
     ];
     
     protected $observers    = [
@@ -29,7 +29,6 @@ class ClientServiceProvider extends ServiceProvider {
         
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__.'/../config' => config_path('configure')], 'configure-clent');
-            $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')], 'configure-clent');
         }
         
         $this->registerRouter();
@@ -43,7 +42,7 @@ class ClientServiceProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        //$this->commands($this->commands);
+        $this->commands($this->commands);
     }
     
     /**
